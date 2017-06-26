@@ -1,0 +1,46 @@
+Убираем диски с рабочего стола:
+defaults write com.apple.Finder ShowHardDrivesOnDesktop NO && killall Finder
+
+Возвращаем диски на раб стол:
+defaults write com.apple.Finder ShowHardDrivesOnDesktop Yes && killall Finder
+
+Включаем показ скрытых файлов и папок:
+defaults write com.apple.Finder AppleShowAllFiles 1 && killall Finder
+
+Выключаем показ скрытых файлов и папок:
+defaults write com.apple.Finder AppleShowAllFiles 0 && killall Finder
+
+Источник:  https://www.iguides.ru/forum/showthread.php?t=55120
+
+
+еxport PS1="[33[0;36m]u[33[m]@[33[32m]h:[33[33;1m]w[33[m]$ "
+
+
+Зел\циан\розов:
+
+nano .bash_profile
+
+PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[0;36m\]\w\[\e[m\] \[\e[0;35m\]\$\[\e[m\] \[\e[0;37m\]'
+ 
+Источник: https://wiki.archlinux.org/index.php/Color_Bash_Prompt_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)
+
+
+
+
+
+
+
+git checkout dev
+git pull
+git checkout -b new_branch
+git commit -m «Commit»
+git push new_branch
+Create PR
+
+Удаление удаленной ветки:
+git push origin --delete <branchname>
+
+Удаление локальной ветки:
+Git branch -D <branchname>
+
+Модалки z-index: 30;
