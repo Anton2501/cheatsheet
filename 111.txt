@@ -13,22 +13,108 @@ defaults write com.apple.Finder AppleShowAllFiles 0 && killall Finder
 Источник:  https://www.iguides.ru/forum/showthread.php?t=55120
 
 
+
+
+
+
+
+
+Статья по форматированию приглашения bash: https://rtfm.co.ua/bash-nastraivaem-konsol-pod-sebya/
+Статья по настройке цветов приглашения bash: https://wiki.archlinux.org/index.php/Color_Bash_Prompt_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)
+
+Настройка цветного приглашения(Зел\циан\розов):
+open $HOME —> .bash_profile —> Вставить это без кавычек:
+«PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[0;36m\]\w\[\e[m\] \[\e[0;35m\]\$\[\e[m\] \[\e[0;37m\]'
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+»
+
+
+
+
 еxport PS1="[33[0;36m]u[33[m]@[33[32m]h:[33[33;1m]w[33[m]$ "
 
 
 Зел\циан\розов:
 
+В папке HOME(открывается в терминале по умолчанию):
+
 nano .bash_profile
 
+вставить и сохранить нижнее:
+
 PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[0;36m\]\w\[\e[m\] \[\e[0;35m\]\$\[\e[m\] \[\e[0;37m\]'
- 
-Источник: https://wiki.archlinux.org/index.php/Color_Bash_Prompt_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)
 
 
 
 
 
 
+
+
+
+
+Sublime Text 3:
+
+Добавить поддержку EMMET в JSX: Надо скачать плагин Babel + вставить код ниже в {Настройки - Preferences - Keybindings - User}:
+
+[	
+	{ "keys": ["alt+shift+f"], "command": "reindent" },
+	{ "keys": ["tab"], "command": "expand_abbreviation_by_tab", "context": [
+	        {
+	            "operand": "source.js", 
+	            "operator": "equal", 
+	            "match_all": true, 
+	            "key": "selector"
+	        },
+	        {   
+	            "key": "selection_empty", 
+	            "operator": "equal", 
+	            "operand": true,
+	            "match_all": true 
+	        }	        
+	    ]
+	},
+	{ "keys": ["tab"], "command": "next_field", "context":
+	    [
+	        { "key": "has_next_field", "operator": "equal", "operand": true }
+	    ]
+	}
+]
+
+Заменить табуляции на 2 пробела по умолчанию - вставить код ниже в { Preferences - Settings - User }:
+
+{
+	"color_scheme": "Packages/Color Scheme - Default/Mariana.tmTheme",
+	"ignored_packages":
+	[
+		"JavaScript Ultimate",
+		"JavaScriptNext - ES6 Syntax",
+		"JSX",
+		"Numix Theme",
+		"SideBarEnhancements",
+		"Theme - Monokai Pro",
+		"Vintage"
+	],	
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GIT:
 
 git checkout dev
 git pull
