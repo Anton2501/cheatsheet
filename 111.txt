@@ -83,6 +83,13 @@ Sublime Text 3:
 	}
 ]
 
+source: http://wesbos.com/emmet-react-jsx-sublime/
+
+
+
+
+
+
 Заменить табуляции на 2 пробела по умолчанию - вставить код ниже в { Preferences - Settings - User }:
 
 {
