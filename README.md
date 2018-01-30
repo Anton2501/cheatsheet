@@ -1,21 +1,21 @@
 # MAC OS:
 
-##### BASH
+#### BASH
 ls - показывает, что в директории
 pwd - показывает путь к текущей директории в виде строки
 mkdir - новая папка
 
 
-##### Убираем диски с рабочего стола:
+#### Убираем диски с рабочего стола:
 defaults write com.apple.Finder ShowHardDrivesOnDesktop NO && killall Finder
 
-##### Возвращаем диски на раб стол:
+#### Возвращаем диски на раб стол:
 defaults write com.apple.Finder ShowHardDrivesOnDesktop Yes && killall Finder
 
-##### Включаем показ скрытых файлов и папок:
+#### Включаем показ скрытых файлов и папок:
 defaults write com.apple.Finder AppleShowAllFiles 1 && killall Finder
 
-##### Выключаем показ скрытых файлов и папок:
+#### Выключаем показ скрытых файлов и папок:
 defaults write com.apple.Finder AppleShowAllFiles 0 && killall Finder
 
 [Источник](https://www.iguides.ru/forum/showthread.php?t=55120)
@@ -24,24 +24,28 @@ defaults write com.apple.Finder AppleShowAllFiles 0 && killall Finder
 
 [Статья по настройке цветов приглашения bash](https://wiki.archlinux.org/index.php/Color_Bash_Prompt_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9))
 
-##### Настройка цветного приглашения(Зел\циан\розов):
+#### Настройка цветного приглашения(Зел\циан\розов):
 open $HOME —> .bash_profile —> Вставить это без кавычек:
 
+```
 «PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[0;36m\]\w\[\e[m\] \[\e[0;35m\]\$\[\e[m\] \[\e[0;37m\]'
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 »
+```
 
 Затем:
+```
 еxport PS1="[33[0;36m]u[33[m]@[33[32m]h:[33[33;1m]w[33[m]$ "
+```
 
-####Зел\циан\розов:
+### Зел\циан\розов:
 
-##### В папке HOME(открывается в терминале по умолчанию):
+#### В папке HOME(открывается в терминале по умолчанию):
 nano .bash_profile
 
-#####Вставить и сохранить: 
+#### Вставить и сохранить: 
 PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[0;36m\]\w\[\e[m\] \[\e[0;35m\]\$\[\e[m\] \[\e[0;37m\]'
 
 
@@ -73,7 +77,7 @@ npm up - обновляет модули в папке node_modules
 npm r <modulename> - удаляет модуль из папки node_modules
 
 Структура версии пакета npm:
-#### [a.b.c]:
+### [a.b.c]:
 * a - структурные изменения(порядок аргументов функций, например)
 * b - добавились новые возможности
 * c - багофиксы
@@ -186,7 +190,7 @@ li:nth-child(n+5) {
 
 
 
-**Заменить табуляции на 2 пробела по умолчанию:**
+#### Заменить табуляции на 2 пробела по умолчанию:
 вставить код ниже в { Preferences - Settings - User }:
 
 ```
