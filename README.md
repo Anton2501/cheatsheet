@@ -94,6 +94,12 @@ PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[0;36m\]\w\[\e[m\] \[\e[0;35m\]\$\[\e[m\] \[\e[0
 
 # CSS
 
+##### Вот так можно заимпортить CSS в SCSS:
+
+```
+@import "CSS:../../bower_components/normalize.css/normalize.css";
+```
+
 Left: 50%;
 Top: 50%;
 transform: translate3d(-50%, -50%, 0);
